@@ -1,5 +1,5 @@
 import React, { Component, createContext } from "react";
-import { scryRenderedComponentsWithType } from "react-dom/test-utils";
+// import { scryRenderedComponentsWithType } from "react-dom/test-utils";
 
 //connecting Highscore and Currentscore
 const { Provider, Consumer } = createContext();
@@ -14,8 +14,16 @@ class ConfigProvider extends Component {
         lastClicked: "",
         clickedIcons: [],
         icons: ["./images/doberman1.jpg" ,"./images/doberman2.jpg", "./images/doberman3.jpg", "./images/doberman4.jpg", "./images/doberman5.jpg", "./images/doberman6.jpg", "./images/doberman7.jpg", "./images/doberman8.jpg", "./images/doberman9.jpg" ],
-        shuffleArray: (array) => {
-            array.sort(()=> Math.random() - .5);
+        // shuffleArray: () => {
+            // this.state.icons.sort(()=> Math.random() - .5);
+        // },
+        handleClick: (clicked) => {
+            console.log("you just clicked:",clicked);
+            console.log("the state before we mani", this.state.lastClicked)
+            this.setState({lastClicked: clicked}); 
+            console.log("newstate",this.state.lastClicked);
+            // state.icons.setState();
+
         }
        
     };
@@ -26,7 +34,9 @@ class ConfigProvider extends Component {
                 highscore: 12,
                 currentscore: 0,
                 clickedIcons: this.state.clickedIcons,
-                icons: this.state.icons
+                icons: this.state.icons,
+                shuffleArray: this.state.shuffleArray,
+                handleClick: this.state.handleClick
             }}>
                 {this.props.children}
             </Provider>
