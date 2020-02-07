@@ -1,4 +1,8 @@
 nav.navbar.navbar-default {
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
-  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }

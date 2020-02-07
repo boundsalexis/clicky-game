@@ -1,0 +1,18 @@
+.icons{
+    width:150px;
+    height:150px;
+}
+div{
+
+  background-size: cover;
+
+}
+
+.container{
+  width:500px;
+  height: 500px;
+  outline: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: minimax(100px,auto);
+}
