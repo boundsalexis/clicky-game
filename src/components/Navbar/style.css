@@ -1,8 +1,25 @@
 nav.navbar.navbar-default {
     margin-bottom: 20px;
+    font-size: 50px;
+    /* background-image: url("./square_bg_@2X.png"); */
   }
   .sticky {
     position: fixed;
     top: 0;
     width: 100%;
+    height:70px;
+  }
+  nav{
+    background: #FFA3CB;
+    font-size: 50px;
+  }
+  .center{
+    padding-left:17%;
+    
+  }
+  .right{
+    padding-left:15%;
+  }
+  .navbar-brand{
+    font-size: 30px;
   }

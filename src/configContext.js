@@ -1,4 +1,5 @@
 import React, { Component, createContext } from "react";
+import { scryRenderedComponentsWithType } from "react-dom/test-utils";
 
 //connecting Highscore and Currentscore
 const { Provider, Consumer } = createContext();
@@ -12,7 +13,10 @@ class ConfigProvider extends Component {
         currentscore: 0,
         lastClicked: "",
         clickedIcons: [],
-        icons: ["./images/doberman1.jpg" ,"./images/doberman2.jpg", "./images/doberman3.jpg", "./images/doberman4.jpg", "./images/doberman5.jpg", "./images/doberman6.jpg", "./images/doberman7.jpg", "./images/doberman8.jpg", "./images/doberman9.jpg" ]
+        icons: ["./images/doberman1.jpg" ,"./images/doberman2.jpg", "./images/doberman3.jpg", "./images/doberman4.jpg", "./images/doberman5.jpg", "./images/doberman6.jpg", "./images/doberman7.jpg", "./images/doberman8.jpg", "./images/doberman9.jpg" ],
+        shuffleArray: (array) => {
+            array.sort(()=> Math.random() - .5);
+        }
        
     };
 

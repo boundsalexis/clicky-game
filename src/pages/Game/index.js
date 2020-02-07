@@ -9,16 +9,20 @@ const Game = props => {
             {context => {
                 return (
                     <div className="container">
-                        {context.icons.map(element=>(
-                            
-                        <div className="icons click-item shake" key={element} role="img" aria-label="click item" height="50px" width="50px" style={{backgroundImage: `url(${element})`}}>
-                            
-                            </div>
+              
+                            {context.icons.map(element => (
 
-                          
+                                <div className="icons click-item shake" key={element} role="img" aria-label="click item" height="50px" width="50px" style={{ backgroundImage: `url(${element})` }}>
 
-                        ))}
-                   
+                                </div>
+
+
+
+                            ))}
+
+                       
+
+
                     </div>
                 )
             }}

@@ -2,5 +2,6 @@
     margin-top: 50px;
     padding:50px;
     text-align: center;
-    background-image: url("./texturetastic_gray_@2X.png");
+    background: #FF7EB5;
+    /* background-image: url("./square_bg_@2X.png"); */
 }

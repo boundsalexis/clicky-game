@@ -17,7 +17,6 @@ function App() {
     <Router>
     <Navbar/>
     <Header/>
-    {/* <Game/> */}
     <Wrapper>
     <Route exact path="/" component={Game}/>
     </Wrapper>

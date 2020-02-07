@@ -9,15 +9,15 @@ const Navbar = props => {
     <Consumer>
       {context => {
         return (
-          <nav className="navbar navbar-expand-lg navbar-light bg-light sticky">
+          <nav className="navbar navbar-expand-lg navbar-light  sticky">
             <Link className="navbar-brand" to="/">
               Clicky Game
           </Link>
-          <div className="navbar-brand">
+          <div className="navbar-brand center">
             Click Image To Begin!
           </div>
-          <div className="navbar-brand">
-          {context.highscore} | {context.currentscore}
+          <div className="navbar-brand right">
+          Highscore: {context.highscore} | Score: {context.currentscore}
           </div>
             {/* <a className="navbar-brand">Click Image to Begin!</a>
             <a className="navbar-brand"> {context.highscore} | {context.currentscore}</a> */}
