@@ -2,7 +2,7 @@ import * as React from "react";
 import { ConfigProvider } from "./configContext";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
-// import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar";
 import Wrapper from "./components/Wrapper";
 import Game from "./pages/Game";
 import Header from "./components/Header";
@@ -15,7 +15,7 @@ function App() {
     <div className="div">
     <ConfigProvider>
     <Router>
-  
+    <Navbar/>
     <Header/>
     <Wrapper>
     <Route exact path="/" component={Game}/>
