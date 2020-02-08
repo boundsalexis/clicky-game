@@ -2,6 +2,7 @@ import React from "react";
 // import { Link } from "react-router-dom";
 import "./style.css";
 import Consumer from "../../configContext";
+import Navbar from "../../components/Navbar";
 
 const Game = props => {
     // let handleClick= (event) => {
@@ -13,12 +14,17 @@ const Game = props => {
         <Consumer>
             {context => {
                 return (
+                    <div>
+
+<Navbar/>
                     <div className="container" >
                             {context.icons.map(element => (
                                 <div onClick={ ()=> context.handleClick(`${element}`)} className="icons click-item shake" key={element} role="img" aria-label="click item" height="50px" width="50px" style={{ backgroundImage: `url(${element})` }}>
                                 </div>
                             ))}
                     </div>
+                    </div>
+                   
                 )
             }}
 
