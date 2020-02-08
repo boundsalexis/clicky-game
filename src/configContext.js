@@ -14,74 +14,57 @@ class ConfigProvider extends Component {
         lastClicked: "",
         clickedIcons: [],
         icons: ["./images/doberman1.jpg", "./images/doberman2.jpg", "./images/doberman3.jpg", "./images/doberman4.jpg", "./images/doberman5.jpg", "./images/doberman6.jpg", "./images/doberman7.jpg", "./images/doberman8.jpg", "./images/doberman9.jpg"],
-        // shuffleArray: () => {
-        // this.state.icons.sort(()=> Math.random() - .5);
-        // },
         handleClick: (clicked) => {
-        
-
-            //variables for later
-            let clickedArray = this.state.clickedIcons;
-            let iconArray = this.state.icons; 
-            let currentscore = this.state.currentscore;
-
+            const { highscore, currentscore, clickedIcons, icons } = this.state;
+            // variables to help with updating state
+            let updatedClicked = clickedIcons;
+            let shuffledIcons = icons;
+            let newCurrentScore = currentscore;
+            let newHighScore = highscore;
+            //user has not lost
             let lost = false;
-            //if there is something in the clicked array we will do this
-            // if (clickedArray.length > 0) {
+            // if array is not empty
+            // iterate through array contents
+            clickedIcons.map(element => {
+                /// if one of the elements matches what was just clicked
+                if (element === clicked) {
+                    //we tell them they lost
+                    lost = true;
+                    alert("you lost");
+                    // if it didnt match anything
+                }
+            })
 
-            // map through clicked icons
-                this.state.clickedIcons.map(element => {
 
-                    /// if one of the elements matches what was just clicked
-                    if (element === clicked) {
-                        //we tell them they lost
-                        lost= true;
-                        alert("you lost");                       
-                        // if it didnt match anything
-                    } 
-                    // else {
-                    //     // add it to our array
-                    //     clickedArray.push(clicked);
-                    //     // update our score
-                    //     currentscore += 1;
+            if (lost === false) {
+                // update our update vars
+                updatedClicked.push(clicked);
+                newCurrentScore += 1;
+                newHighScore += 1;
+                //pushing the state up
+                this.setState({ clickedIcons: updatedClicked })
+                this.setState({ currentscore: newCurrentScore });
+                this.setState({ highscore: newHighScore });
 
-                    //     /// update states to reflect score
-                    //     this.setState({currentscore: currentscore});
-                    //     this.setState({ clickedIcons: clickedArray });
-                    // }
-                    // return null;
-                })
+            }else{
+                console.log("itsa me");
+                updatedClicked =[];
+                newCurrentScore=0;
+                this.setState({ clickedIcons: updatedClicked })
+                this.setState({ currentscore: newCurrentScore });
 
-            // if the clicked array is empty
-            // } 
-            // else {
-            if (lost===false){
-                clickedArray.push(clicked);
-                //update state
-                this.setState({ clickedIcons: clickedArray })
-                // update score
-                currentscore += 1;
-                // update state
-                this.setState({currentscore: currentscore});
+
             }
-                // //add what was just clicked
-                // clickedArray.push(clicked);
-                // //update state
-                // this.setState({ clickedIcons: clickedArray })
-                // // update score
-                // currentscore += 1;
-                // // update state
-                // this.setState({currentscore: currentscore});
-                
-            // }
-            // currentscore += 1;
-            // this.setState({currentscore: currentscore})
+            // no matter what we shuffle the array
+            //shuffle array
+            shuffledIcons.sort(() => Math.random() - 0.5);
+            shuffledIcons.sort(()=> Math.random() - 0.5);
+            shuffledIcons.sort(() => Math.random() - 0.5);
 
-        //shuffle array
-        iconArray.sort(() => Math.random() - 0.5);
-        // update array to shuffled array
-        this.setState({icons: iconArray});
-        return null;
+            // update array to shuffled array
+            this.setState({ icons: shuffledIcons });
+            console.log(highscore, currentscore,clickedIcons,icons);
+
         }
 
     };
