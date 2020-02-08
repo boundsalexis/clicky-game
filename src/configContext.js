@@ -18,11 +18,26 @@ class ConfigProvider extends Component {
             // this.state.icons.sort(()=> Math.random() - .5);
         // },
         handleClick: (clicked) => {
-            console.log("you just clicked:",clicked);
-            console.log("the state before we mani", this.state.lastClicked)
-            this.setState({lastClicked: clicked}); 
-            console.log("newstate",this.state.lastClicked);
-            // state.icons.setState();
+            console.log(this.state.clickedIcons);
+            let clickedArray = this.state.clickedIcons;
+            if (clickedArray.length >0 ){
+                this.state.clickedIcons.map( element =>{
+                    console.log("in here")
+                    if (element === clicked){
+                        
+                        alert("You lose");
+                    }else{
+                        console.log("down here");
+                        clickedArray.push(clicked);
+                        this.setState({clickedIcons: clickedArray})
+                    }
+
+            })
+        }else{
+            clickedArray.push(clicked);
+            this.setState({clickedIcons: clickedArray})
+        }
+
 
         }
        
