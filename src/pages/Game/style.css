@@ -7,6 +7,7 @@ div{
 
   background-size: cover;
 
+
 }
 
 .container{
@@ -39,7 +40,7 @@ div{
       grid-template-columns: 50px; /*Make the grid smaller than the container*/
       grid-gap: 10px;
       width: 500px;
-      margin-left:-90px;
+      margin-left:-120px;
      }
      /* div{
        width:fit-content;
