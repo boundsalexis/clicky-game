@@ -40,11 +40,12 @@ class ConfigProvider extends Component {
                 // update our update vars
                 updatedClicked.push(clicked);
                 newCurrentScore += 1;
-                newHighScore += 1;
-                //pushing the state up
                 this.setState({ clickedIcons: updatedClicked })
                 this.setState({ currentscore: newCurrentScore });
-                this.setState({ highscore: newHighScore });
+                if(newCurrentScore > highscore && newHighScore<9){
+                    newHighScore += 1;
+                    this.setState({ highscore: newHighScore });
+                    }
 
             }else{
                 console.log("itsa me");

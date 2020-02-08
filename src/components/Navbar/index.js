@@ -10,17 +10,16 @@ const Navbar = props => {
       {context => {
         return (
           <nav className="navbar navbar-expand-lg navbar-light  sticky">
-            <Link className="navbar-brand" to="/">
+            <ul>
+            <li className="navbar-brand left"> <Link className="navbar-brand" to="/">
               Clicky Game
-          </Link>
-          <div className="navbar-brand center">
-            Click Image To Begin!
-          </div>
-          <div className="navbar-brand right">
-          Highscore: {context.highscore} | Score: {context.currentscore}
-          </div>
-            {/* <a className="navbar-brand">Click Image to Begin!</a>
-            <a className="navbar-brand"> {context.highscore} | {context.currentscore}</a> */}
+          </Link></li>
+        
+            <li className="navbar-brand center">
+            Highscore: {context.highscore} | Score: {context.currentscore}
+            </li>
+            </ul>
+
            
         
           </nav>
@@ -32,24 +31,6 @@ const Navbar = props => {
   )
 }
 
-// function Navbar() {
-//   return (
-//     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-//       <Link className="navbar-brand" to="/">
-//         Clicky Game
-//       </Link>
-//       <div>
-//         <ul className="navbar-nav">
-//           <li className="nav-brand">
-//             Click Image to Begin!
-//           </li>
-//           <li className="nav-brand">
-//             {/* Score: State*/}
-//           </li>
-//         </ul>
-//       </div>
-//     </nav>
-//   );
-// }
+
 
 export default Navbar;

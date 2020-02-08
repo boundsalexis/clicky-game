@@ -3,5 +3,11 @@
     padding:50px;
     text-align: center;
     background: #FF7EB5;
-    /* background-image: url("./square_bg_@2X.png"); */
+    width:100%;
 }
+@media (max-width: 600px) {
+   h1{
+       font-size: 15px;
+       margin-left: -80px;
+   }
+    }

@@ -3,7 +3,7 @@ import "./style.css";
 const Header = props =>{
     return(
         <div className="head">
-            <h1>Play that Clicky</h1>
+            <h1>Don't Click The Same One Twice</h1>
         </div>
     )
 }
