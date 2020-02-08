@@ -2,14 +2,9 @@ import React from "react";
 // import { Link } from "react-router-dom";
 import "./style.css";
 import Consumer from "../../configContext";
-import Navbar from "../../components/Navbar";
-<Navbar/>
-const Game = props => {
-    // let handleClick= (event) => {
-    //     console.log(event.target);
-    //     cotext.icons.setState();
 
-    
+const Game = props => {
+
     return (
         <Consumer>
             {context => {

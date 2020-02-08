@@ -18,7 +18,7 @@ function App() {
     <Navbar/>
     <Header/>
     <Wrapper>
-    <Route exact path="/" component={Game}/>
+    <Route exact path="/clicky-game" component={Game}/>
     </Wrapper>
     </Router>
     </ConfigProvider>
