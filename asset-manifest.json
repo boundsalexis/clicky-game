@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "boundsalexis.github.io/clicky-game/static/css/main.92b45330.chunk.css",
+    "main.js": "boundsalexis.github.io/clicky-game/static/js/main.69b28f50.chunk.js",
+    "main.js.map": "boundsalexis.github.io/clicky-game/static/js/main.69b28f50.chunk.js.map",
+    "runtime-main.js": "boundsalexis.github.io/clicky-game/static/js/runtime-main.4939d429.js",
+    "runtime-main.js.map": "boundsalexis.github.io/clicky-game/static/js/runtime-main.4939d429.js.map",
+    "static/js/2.abb3e62e.chunk.js": "boundsalexis.github.io/clicky-game/static/js/2.abb3e62e.chunk.js",
+    "static/js/2.abb3e62e.chunk.js.map": "boundsalexis.github.io/clicky-game/static/js/2.abb3e62e.chunk.js.map",
+    "index.html": "boundsalexis.github.io/clicky-game/index.html",
+    "precache-manifest.05241493cfc424f069a5082626ff9e9a.js": "boundsalexis.github.io/clicky-game/precache-manifest.05241493cfc424f069a5082626ff9e9a.js",
+    "service-worker.js": "boundsalexis.github.io/clicky-game/service-worker.js",
+    "static/css/main.92b45330.chunk.css.map": "boundsalexis.github.io/clicky-game/static/css/main.92b45330.chunk.css.map",
+    "static/js/2.abb3e62e.chunk.js.LICENSE.txt": "boundsalexis.github.io/clicky-game/static/js/2.abb3e62e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4939d429.js",
+    "static/js/2.abb3e62e.chunk.js",
+    "static/css/main.92b45330.chunk.css",
+    "static/js/main.69b28f50.chunk.js"
+  ]
+}
