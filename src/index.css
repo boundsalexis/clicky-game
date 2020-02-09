@@ -1,13 +1,12 @@
 body {
   margin: 0;
   overflow-x: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url("./pixel-heart.png");
   background-repeat: repeat;
+  
 }
 
 code {
@@ -18,4 +17,11 @@ html{
   max-width: 100%;
   overflow-x: hidden;
   background-image: url("./pixel-heart.png");
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: black ;
+  color: white;
 }
+
+/* -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+sans-serif; */

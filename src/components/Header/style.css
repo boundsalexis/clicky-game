@@ -4,10 +4,25 @@
     text-align: center;
     background: #FF7EB5;
     width:100%;
+    grid-gap: 3px;
+    padding: 70px 0 20px 0;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+}
+.justify{
+    justify-content: left;
+    padding-left: 20px;
+ 
 }
 @media (max-width: 600px) {
    h1{
        font-size: 15px;
-       margin-left: -90px;
+       /* margin-left: -90px; */
    }
+
     }
