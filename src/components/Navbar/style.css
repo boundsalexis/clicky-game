@@ -8,7 +8,7 @@ nav.navbar.navbar-default {
     position: fixed;
     top: 0;
     width: 100%;
-    
+    /* text-align: center; */
     /* height:70px; */
   }
   nav{
@@ -25,23 +25,20 @@ nav.navbar.navbar-default {
   .navbar-brand{
     font-size: 30px;
     color: black;
-    text-align: center;
+    /* text-align: center; */
   }
 
- 
+ ul{
+  margin: 0 auto;
+  padding: 0 0 15px;
+ }
 li{
    text-align: center;
-   /* margin:0px;
-   padding:0px; */
+   margin:0px;
+   padding:0px;
    font-weight: bold;
   }
-  /* .center{
-    padding-left:17%;
-    
-  }
-  .right{
-    padding-left:15%;
-  } */
+  
   @media (max-width: 600px) {
     .navbar-brand{
       font-size: 10px;
