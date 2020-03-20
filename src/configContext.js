@@ -5,8 +5,6 @@ import React, { Component, createContext } from "react";
 const { Provider, Consumer } = createContext();
 
 
-//HAVE TO DEFINE PROVIDER BECAUSE ITS PROVIDING, DONT HAVE TO DEFINE CONSUMER BECAUSE ITS JUST USING THOSE VALUES
-//consumer is useless without provider
 class ConfigProvider extends Component {
 
     //sets the global state variables we need
@@ -25,7 +23,7 @@ class ConfigProvider extends Component {
             let newCurrentScore = currentscore;
             let newHighScore = highscore;
 
-            
+
             //user has not lost
             let lost = false;
 
@@ -37,9 +35,9 @@ class ConfigProvider extends Component {
                     //we tell them they lost
                     lost = true;
                     alert("You Lost");
-                   
+
                 }
-            
+
             })
 
 
@@ -53,23 +51,23 @@ class ConfigProvider extends Component {
                 this.setState({ clickedIcons: updatedClicked })
                 this.setState({ currentscore: newCurrentScore });
                 //stops the highscore from continuing to acrue across multiple games
-                if(newCurrentScore > highscore && newHighScore<9){
+                if (newCurrentScore > highscore && newHighScore < 9) {
                     newHighScore += 1;
                     this.setState({ highscore: newHighScore });
-                    }
-                if( newCurrentScore === 9){
+                }
+                if (newCurrentScore === 9) {
                     alert("You Won!")
-                    updatedClicked =[];
-                newCurrentScore=0;
-                this.setState({ clickedIcons: updatedClicked })
-                this.setState({ currentscore: newCurrentScore });
+                    updatedClicked = [];
+                    newCurrentScore = 0;
+                    this.setState({ clickedIcons: updatedClicked })
+                    this.setState({ currentscore: newCurrentScore });
                 }
 
-            }else{
+            } else {
                 //if lost is true, reset the game
 
-                updatedClicked =[];
-                newCurrentScore=0;
+                updatedClicked = [];
+                newCurrentScore = 0;
                 this.setState({ clickedIcons: updatedClicked })
                 this.setState({ currentscore: newCurrentScore });
 
@@ -79,12 +77,12 @@ class ConfigProvider extends Component {
             //shuffle array
             //shuffle more that once for peak randome
             shuffledIcons.sort(() => Math.random() - 0.5);
-            shuffledIcons.sort(()=> Math.random() - 0.5);
+            shuffledIcons.sort(() => Math.random() - 0.5);
             shuffledIcons.sort(() => Math.random() - 0.5);
 
             // update array to shuffled array
             this.setState({ icons: shuffledIcons });
-            console.log(highscore, currentscore,clickedIcons,icons);
+            console.log(highscore, currentscore, clickedIcons, icons);
 
         }
 
