@@ -39,11 +39,10 @@ if (lost === false) {
 
 
 ## Built With
-* [React](https://reactjs.org/) - The web framework used
+* [React](https://reactjs.org/)
 * [Node.js](https://nodejs.org/en/)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [Javascript](https://www.javascript.com/)
-* [Node.js](https://nodejs.org/en/)
 * [Express](https://www.npmjs.com/package/express)
 
 # Installation
