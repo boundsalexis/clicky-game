@@ -36,7 +36,7 @@ class ConfigProvider extends Component {
                 if (element === clicked) {
                     //we tell them they lost
                     lost = true;
-                    alert("you lost");
+                    alert("You Lost");
                    
                 }
             
@@ -57,6 +57,13 @@ class ConfigProvider extends Component {
                     newHighScore += 1;
                     this.setState({ highscore: newHighScore });
                     }
+                if( newCurrentScore === 9){
+                    alert("You Won!")
+                    updatedClicked =[];
+                newCurrentScore=0;
+                this.setState({ clickedIcons: updatedClicked })
+                this.setState({ currentscore: newCurrentScore });
+                }
 
             }else{
                 //if lost is true, reset the game
